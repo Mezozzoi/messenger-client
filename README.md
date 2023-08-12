@@ -2,7 +2,7 @@
 
 Personal React App project. Simple instant messaging service with base functionality.
 
-> See also related back-end app: [messenger-server](https://github/).
+> See also related back-end app: [messenger-server](https://github.com/Mezozzoi/messenger-server).
 
 ## Scripts
 
