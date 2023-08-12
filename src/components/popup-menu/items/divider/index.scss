@@ -1,0 +1,9 @@
+@use "src/assets/colors";
+@use "src/assets/common";
+
+.menu-divider {
+  padding: 0;
+  margin: 5px 0;
+  height: 10px;
+  background: colors.$secondary;
+}

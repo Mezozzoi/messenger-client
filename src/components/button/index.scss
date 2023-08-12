@@ -1,0 +1,82 @@
+@use "src/assets/common";
+@use "src/assets/colors";
+
+.button {
+  width: fit-content;
+  border-radius: common.$small-border-radius;
+  padding: 5px 20px;
+  font-size: 1em;
+  color: colors.$primary-text;
+  background: colors.$primary-button;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: filter .3s;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &:focus {
+    outline: colors.$secondary solid 2px;
+  }
+
+  &.filled {
+    color: colors.$primary-text;
+
+    &.primary {
+      background: colors.$primary-button;
+    }
+
+    &.secondary {
+      background: colors.$secondary-button;
+    }
+
+    &.danger {
+      background: colors.$danger;
+    }
+  }
+
+  &.plain {
+    background: none;
+    padding: 0;
+
+    &.primary {
+      color: colors.$primary-button;
+    }
+
+    &.secondary {
+      color: colors.$secondary-button;
+    }
+
+    &.danger {
+      color: colors.$danger;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(120%);
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .title {
+
+  }
+}

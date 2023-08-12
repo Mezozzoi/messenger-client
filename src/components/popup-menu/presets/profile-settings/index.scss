@@ -1,0 +1,32 @@
+@use "src/assets/colors";
+@use "src/assets/common";
+
+.profile-settings {
+
+  .profile-info {
+    padding: 5px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .user-avatar {
+      width: 70px;
+      height: 70px;
+    }
+
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .profile-name {
+
+      }
+
+      .profile-id {
+        color: colors.$secondary-text;
+        font-size: common.$secondary-text-size;
+      }
+    }
+  }
+}

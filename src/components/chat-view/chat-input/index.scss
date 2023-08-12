@@ -1,0 +1,89 @@
+@use "src/assets/common";
+@use "src/assets/colors";
+
+
+
+#chat-view__footer {
+  display: flex;
+  flex-direction: column;
+
+  .chat-view__editing {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px common.$padding;
+    background: colors.$primary;
+    font-size: common.$secondary-text-size;
+    align-items: center;
+    border-top: 1px solid colors.$secondary;
+
+    &-label {
+
+    }
+
+    &-close {
+
+    }
+  }
+
+  #chat-view__attachments-hint {
+    display: flex;
+    background: colors.$primary;
+    padding: 3px common.$padding;
+    font-size: common.$secondary-text-size;
+    gap: 5px;
+    align-items: center;
+    border-top: 1px solid colors.$secondary;
+    border-bottom: 1px solid colors.$secondary;
+
+    .file-preview {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .filename {
+      font-weight: bold;
+      color: colors.$primary-text;
+      max-width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .files-count {
+      color: colors.$secondary-text
+    }
+
+    .remove-files {
+      margin-left: auto;
+    }
+  }
+
+  #chat-view__input-container {
+    display: flex;
+    align-items: center;
+    background: colors.$primary;
+    padding: 5px common.$padding;
+    gap: 5px;
+
+    #chat-view__input {
+      width: 100%;
+      max-height: 4 * common.$primary-text-size;
+      height: 100%;
+    }
+
+    #chat-view__clip-button {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: none;
+    }
+
+    #chat-view__send-button {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "src/assets/common";
+@use "src/assets/colors";
+
+#chat-view__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: colors.$primary;
+  padding: common.$padding;
+  height: 56px;
+  align-items: center;
+  gap: 10px;
+
+  #chat-view__chat-name {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+
+  #chat-view__close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,21 @@
+@use "src/assets/common";
+@use "src/assets/colors";
+
+.image-input-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  .preview {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: colors.$secondary;
+  }
+
+  .select-image {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+@use "src/assets/colors";
+@use "src/assets/common";
+
+.main-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .socket-status {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    white-space: nowrap;
+    gap: 10px;
+    font-size: common.$secondary-text-size;
+    color: colors.$secondary-text;
+    align-items: center;
+
+    .loader {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

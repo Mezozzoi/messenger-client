@@ -1,0 +1,70 @@
+@use "src/assets/colors";
+@use "src/assets/common";
+
+.message-attachment__image {
+  flex: 1 0 30%;
+  min-width: 100px;
+  min-height: 100px;
+  max-height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.message-attachment__video {
+  flex: 1 0 30%;
+  min-width: 150px;
+  min-height: 100px;
+  max-height: 350px;
+  border-radius: 10px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.message-attachment__audio {
+  flex: 1;
+  min-width: 100%;
+  height: 30px;
+}
+
+
+.message-attachment__file {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  border-radius: 100px;
+  cursor: pointer;
+  gap: 5px;
+
+  $iconSize: 25px;
+  .file-icon {
+    height: $iconSize;
+    width: $iconSize;
+    flex-shrink: 0;
+  }
+
+  .file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: calc(100% - $iconSize);
+
+    .filename {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .file-size {
+      color: colors.$secondary-text;
+      font-size: common.$secondary-text-size;
+      white-space: nowrap;
+    }
+  }
+}

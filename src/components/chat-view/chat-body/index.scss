@@ -1,0 +1,8 @@
+#chat-view__body {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+}

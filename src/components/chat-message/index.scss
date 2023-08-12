@@ -1,0 +1,68 @@
+@use "src/assets/common";
+@use "src/assets/colors";
+
+.chat-message {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+
+  &.own {
+    .chat-message__container {
+      background: colors.$accent;
+    }
+  }
+
+  .chat-message__avatar {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .chat-message__container {
+    display: flex;
+    padding: 7px;
+    width: fit-content;
+    gap: 5px;
+    flex-direction: column;
+    max-width: 450px;
+    background: colors.$primary;
+    border-radius: common.$primary-border-radius;
+    height: fit-content;
+
+    @media screen and (max-width: 600px) {
+      & {
+        max-width: calc(100% - 35px - 5px);
+      }
+    }
+
+    .chat-message__name {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .chat-message__attachments {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    .chat-message__body {
+      display: flex;
+
+      .chat-message__content {
+        flex: 1;
+        overflow-wrap: anywhere;
+        white-space: pre-line;
+      }
+
+      .chat-message__time {
+        font-size: .7em;
+        color: colors.$secondary-text;
+        justify-self: flex-end;
+        align-self: flex-end;
+        margin: 0 -1px -5px 10px;
+      }
+    }
+  }
+}

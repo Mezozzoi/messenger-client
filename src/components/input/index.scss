@@ -1,0 +1,28 @@
+@use "src/assets/colors";
+@use "src/assets/common";
+
+.input {
+  outline: none;
+  background: colors.$primary-input;
+  color: colors.$primary-text;
+  padding: common.$padding;
+  font-family: inherit;
+  border: none;
+  border-radius: common.$small-border-radius;
+
+  &::placeholder {
+    color: colors.$secondary-text;
+  }
+}
+
+.input:disabled {
+  color: rgba(200, 200, 200, 1);;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}

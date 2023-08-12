@@ -1,0 +1,45 @@
+@use "src/assets/colors";
+@use "src/assets/common";
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: filter .3s;
+  border-radius: common.$small-border-radius;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(120%);
+  }
+
+  &:focus {
+    outline: #525252 solid 2px;
+  }
+
+  &.filled {
+    background: colors.$primary-button;
+  }
+
+  &.plain {
+    background: none;
+
+    & > * {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  & > * {
+    height: 20px;
+    width: 20px;
+  }
+}
